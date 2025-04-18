@@ -16,6 +16,9 @@ import { FormsModule } from '@angular/forms';
 
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from 'ng-gallery/lightbox';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     EventsCalendarComponent,
     ContactUsComponent,
     PageNotFoundComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserAnimationsModule,
     FullCalendarModule,
     FormsModule,
+    GalleryModule,
+    LightboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -8,6 +8,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { EventsCalendarComponent } from './events-calendar/events-calendar.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'events-calendar',
     component: EventsCalendarComponent,
+  },
+  {
+    path: 'gallery',
+    component: GalleryComponent,
   },
   {
     path: 'contact-us',
