@@ -4,10 +4,11 @@ import { trigger, transition, style, animate } from '@angular/animations';
 import { fadeInAnimation } from 'src/animations/route-animations';
 
 @Component({
-  selector: 'app-doctrinal-statement',
-  templateUrl: './doctrinal-statement.component.html',
-  styleUrls: ['./doctrinal-statement.component.css'],
-  animations: [fadeInAnimation],
+    selector: 'app-doctrinal-statement',
+    templateUrl: './doctrinal-statement.component.html',
+    styleUrls: ['./doctrinal-statement.component.css'],
+    animations: [fadeInAnimation],
+    standalone: false
 })
 export class DoctrinalStatementComponent implements OnInit {
   public doctrines: any;

@@ -3,10 +3,11 @@ import { routeTransitionAnimations } from 'src/animations/route-animations';
 import { sermonData } from '../../assets/js/sermons';
 
 @Component({
-  selector: 'app-sermons',
-  templateUrl: './sermons.component.html',
-  styleUrls: ['./sermons.component.css'],
-  animations: [routeTransitionAnimations],
+    selector: 'app-sermons',
+    templateUrl: './sermons.component.html',
+    styleUrls: ['./sermons.component.css'],
+    animations: [routeTransitionAnimations],
+    standalone: false
 })
 export class SermonsComponent implements OnInit {
   sermons: any;

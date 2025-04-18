@@ -14,10 +14,11 @@ import listPlugin from '@fullcalendar/list';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
 
 @Component({
-  selector: 'app-events-calendar',
-  templateUrl: './events-calendar.component.html',
-  styleUrls: ['./events-calendar.component.css'],
-  animations: [fadeInAnimation],
+    selector: 'app-events-calendar',
+    templateUrl: './events-calendar.component.html',
+    styleUrls: ['./events-calendar.component.css'],
+    animations: [fadeInAnimation],
+    standalone: false
 })
 export class EventsCalendarComponent implements OnInit {
   calendarVisible = true;
