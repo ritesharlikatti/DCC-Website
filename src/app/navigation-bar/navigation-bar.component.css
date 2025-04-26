@@ -40,6 +40,9 @@
 .links-container a:hover {
   color: black;
 }
+.bg-blue {
+  background-color: rgb(214 242 255) !important;
+}
 .chevron {
   transition: all 0.2s linear;
   transform: rotate(0deg);
@@ -226,6 +229,7 @@
     display: block;
     flex-shrink: 0;
   }
+  
 }
 
 .links-container {
