@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { fadeInAnimation } from 'src/animations/route-animations';
 import { Gallery, GalleryItem, ImageItem } from 'ng-gallery';
+
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -15,17 +16,28 @@ export class GalleryComponent implements OnInit {
   constructor(public gallery: Gallery) {}
 
   ngOnInit() {
-    // Load items into gallery
+    // Load items into gallery with proper thumbnails
     this.items = [
       new ImageItem({
         src: 'assets/images/PastorsGreeting.jpg',
-        thumb: 'IMAGE_THUMBNAIL_URL',
+        thumb: 'assets/images/PastorsGreeting.jpg',
       }),
       new ImageItem({
         src: 'assets/images/DCCFullChurch.jpg',
-        thumb: 'IMAGE_THUMBNAIL_URL',
+        thumb: 'assets/images/DCCFullChurch.jpg',
       }),
-      // ... more items
+      new ImageItem({
+        src: 'assets/images/ChurchFamily.png',
+        thumb: 'assets/images/ChurchFamily.png',
+      }),
+      new ImageItem({
+        src: 'assets/images/ChurchFamily2.png',
+        thumb: 'assets/images/ChurchFamily2.png',
+      }),
+      new ImageItem({
+        src: 'assets/images/EarlyDCC.jpg',
+        thumb: 'assets/images/EarlyDCC.jpg',
+      }),
     ];
     const galleryRef = this.gallery.ref(this.galleryId);
     galleryRef.load(this.items);

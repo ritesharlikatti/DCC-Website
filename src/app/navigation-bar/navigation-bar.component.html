@@ -2,20 +2,22 @@
   <div class="nav-container container-lg px-0">
     <!-- logo and hamburger icon -->
     <div class="logo-container">
-      <a href="" routerLink="./home"
-        ><img
+      <a href="" routerLink="./home">
+        <img
           src="../../assets/images/DCC-Logo.png"
           alt="logo"
           class="img-fluid d-block me-auto"
           style="height: 70px; width: 240px"
       /></a>
-      <button class="h1 bg-transparent border-0" (click)="pannelToggle()">
+      <button
+        class="h1 bg-transparent border-0 d-md-none"
+        (click)="pannelToggle()"
+      >
         <i class="bi bi-list"></i>
       </button>
     </div>
     <!-- navigation links and buttons -->
-    <div class="links-container">
-      <!-- drop down menu 1 -->
+    <div class="links-container d-none d-md-flex">
       <div class="dropdown-container">
         <a href="" routerLink="./home">Home</a>
         <a href="" routerLink="./pastor-greeting">Pastor's Greeting</a>
@@ -27,14 +29,39 @@
       </div>
     </div>
     <div class="button-container">
-      <!-- <button class="btn-login btn">Login</button> -->
-
       <button
         class="btn-register btn btn-outline-dark"
         routerLink="./contact-us"
       >
         Contact Us
       </button>
+    </div>
+  </div>
+
+  <!-- Side panel for mobile view -->
+  <div
+    class="side-pannel-container"
+    [class.show-pannel]="isShowPannel"
+    (click)="pannelToggle()"
+  >
+    <div class="side-pannel" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="pannelToggle()">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <div class="links-container-side">
+        <a href="" routerLink="./home">Home</a>
+        <a href="" routerLink="./pastor-greeting">Pastor's Greeting</a>
+        <a href="" routerLink="./doctrinal-statement">What We Teach</a>
+        <a href="" routerLink="./sermons">Sermons</a>
+        <a href="" routerLink="./events-calendar">Calendar</a>
+        <a href="" routerLink="./about-us">About Us</a>
+        <a href="" routerLink="./gallery">Gallery</a>
+      </div>
+      <div class="button-container-side">
+        <button class="btn btn-outline-dark w-100" routerLink="./contact-us">
+          Contact Us
+        </button>
+      </div>
     </div>
   </div>
 </nav>
